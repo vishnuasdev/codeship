@@ -1,8 +1,4 @@
 
-/* ==========================================
-   1. GLOBAL RESET
-========================================== */
-
 * {
     margin: 0;
     padding: 0;
@@ -34,10 +30,6 @@ button {
     font-family: inherit;
 }
 
-
-/* ==========================================
-   2. NAVBAR
-========================================== */
 
 .navbar {
     position: fixed;
@@ -165,9 +157,6 @@ button {
 }
 
 
-/* ==========================================
-   3. MAIN
-========================================== */
 
 main {
     width: 100%;
@@ -176,10 +165,6 @@ main {
     padding: 10px 3.75%;
 }
 
-
-/* ==========================================
-   4. HERO SECTION
-========================================== */
 
 .hero-section {
     width: 100%;
@@ -190,11 +175,6 @@ main {
     border-radius: 30px;
     overflow: hidden;
 }
-
-
-/* ==========================================
-   5. HERO BANNER
-========================================== */
 
 .hero-banner {
     width: 100%;
@@ -220,10 +200,6 @@ main {
     background-repeat: no-repeat;
 }
 
-
-/* ==========================================
-   6. HERO CONTENT
-========================================== */
 
 .hero-content {
     width: 50%;
@@ -269,10 +245,6 @@ main {
 }
 
 
-/* ==========================================
-   7. TRUST FEATURES
-========================================== */
-
 .trust-features {
     width: 100%;
     min-height: 75px;
@@ -299,10 +271,6 @@ main {
     border-right: none;
 }
 
-
-/* ==========================================
-   8. FEATURE ICONS
-========================================== */
 
 .feature-icon {
     width: 40px;
@@ -353,10 +321,6 @@ main {
 }
 
 
-/* ==========================================
-   9. FEATURE CONTENT
-========================================== */
-
 .feature-content {
     min-width: 0;
 }
@@ -376,10 +340,6 @@ main {
 }
 
 
-/* ==========================================
-   10. INSURANCE FEATURE SECTION
-========================================== */
-
 .feature-section {
     width: 100%;
     max-width: 1700px;
@@ -392,10 +352,6 @@ main {
     border-radius: 30px;
 }
 
-
-/* ==========================================
-   11. SECTION HEADING
-========================================== */
 
 .feature-subsectionone {
     width: 100%;
@@ -445,11 +401,6 @@ main {
     height: 20px;
 }
 
-
-/* ==========================================
-   12. INSURANCE CATEGORY GRID
-========================================== */
-
 .feature-subsectiontwo {
     width: 100%;
     margin-top: 25px;
@@ -463,10 +414,6 @@ main {
     gap: 15px;
 }
 
-
-/* ==========================================
-   13. INSURANCE CARDS
-========================================== */
 
 .feature-subsectiontwo ul li {
     min-width: 0;
@@ -499,8 +446,6 @@ main {
 }
 
 
-/* Category Images */
-
 .feature-subsectiontwo ul li img {
     width: 90px;
     height: 90px;
@@ -510,7 +455,6 @@ main {
 }
 
 
-/* Category Heading */
 
 .feature-subsectiontwo ul li h3 {
     margin-bottom: 8px;
@@ -520,8 +464,6 @@ main {
     font-weight: 700;
 }
 
-
-/* Compare Plans Link */
 
 .feature-subsectiontwo ul li .compare-link {
     display: inline-flex;
@@ -555,10 +497,6 @@ main {
     font-weight: 700;
 }
 
-
-/* ==========================================
-   14. LARGE TABLET
-========================================== */
 
 @media (max-width: 1200px) {
 
@@ -608,10 +546,6 @@ main {
 }
 
 
-/* ==========================================
-   15. TABLET
-========================================== */
-
 @media (max-width: 850px) {
 
     .navbar {
@@ -650,11 +584,6 @@ main {
         border-right: none;
     }
 }
-
-
-/* ==========================================
-   16. MOBILE
-========================================== */
 
 @media (max-width: 600px) {
 
@@ -822,11 +751,6 @@ main {
         font-size: 11px;
     }
 }
-
-
-/* ==========================================
-   17. SMALL MOBILE
-========================================== */
 
 @media (max-width: 380px) {
 
