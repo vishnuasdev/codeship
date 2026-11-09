@@ -1,0 +1,885 @@
+
+/* ==========================================
+   1. GLOBAL RESET
+========================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #333;
+    background-color: #f5f7fb;
+    line-height: 1.5;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+button {
+    font-family: inherit;
+}
+
+
+/* ==========================================
+   2. NAVBAR
+========================================== */
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    padding: 0 4rem;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+
+    background-color: #fff;
+    border-bottom: 1px solid #f0f0f0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+
+    z-index: 1000;
+}
+
+.logo {
+    flex-shrink: 0;
+}
+
+.logo img {
+    height: 45px;
+    width: auto;
+    display: block;
+}
+
+.nav-links {
+    margin-left: auto;
+}
+
+.nav-links ul,
+.nav-action ul {
+    display: flex;
+    align-items: center;
+}
+
+.nav-links ul {
+    gap: 1.5rem;
+}
+
+.nav-links a,
+.nav-dropdown-btn {
+    font-size: 15px;
+    font-weight: 500;
+    color: #4a5568;
+    transition: color 0.2s ease;
+}
+
+.nav-dropdown-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    padding: 0;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+.nav-links a:hover,
+.nav-dropdown-btn:hover {
+    color: #1a2e5a;
+}
+
+.nav-dropdown-btn svg {
+    width: 15px;
+    height: 15px;
+    fill: #818080;
+}
+
+.nav-action ul {
+    gap: 12px;
+}
+
+.action-btn {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+
+    padding: 7px 14px;
+
+    background: #fff;
+    border: 1px solid #dcd7d7;
+    border-radius: 20px;
+
+    color: #333;
+    font-size: 14px;
+    font-weight: 500;
+
+    white-space: nowrap;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.action-btn svg {
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+    fill: #4f8cb6;
+}
+
+.action-btn:hover {
+    background-color: #f7fafc;
+    border-color: #b8c2cc;
+}
+
+.nav-action ul li:nth-child(2) .action-btn {
+    padding: 8px 18px;
+    background-color: #1a2e5a;
+    border-color: #1a2e5a;
+    color: #fff;
+}
+
+.nav-action ul li:nth-child(2) .action-btn svg {
+    fill: #fff;
+}
+
+.nav-action ul li:nth-child(2) .action-btn:hover {
+    background-color: #233c74;
+}
+
+
+/* ==========================================
+   3. MAIN
+========================================== */
+
+main {
+    width: 100%;
+    min-height: 100vh;
+    margin-top: 70px;
+    padding: 10px 3.75%;
+}
+
+
+/* ==========================================
+   4. HERO SECTION
+========================================== */
+
+.hero-section {
+    width: 100%;
+    max-width: 1700px;
+    margin: 0 auto;
+
+    background-color: #fff;
+    border-radius: 30px;
+    overflow: hidden;
+}
+
+
+/* ==========================================
+   5. HERO BANNER
+========================================== */
+
+.hero-banner {
+    width: 100%;
+    min-height: 425px;
+
+    display: flex;
+    align-items: center;
+
+    background-image:
+        linear-gradient(
+            to right,
+            #eaf7f3 0%,
+            rgba(234, 247, 243, 1) 33%,
+            rgba(234, 247, 243, 0.92) 42%,
+            rgba(234, 247, 243, 0.80) 51%,
+            rgba(234, 247, 243, 0) 63%,
+            transparent 72%
+        ),
+        url("imgs/family.png");
+
+    background-size: auto, 70% 100%;
+    background-position: center, right center;
+    background-repeat: no-repeat;
+}
+
+
+/* ==========================================
+   6. HERO CONTENT
+========================================== */
+
+.hero-content {
+    width: 50%;
+    padding-left: 80px;
+    position: relative;
+    z-index: 1;
+}
+
+.badge {
+    display: inline-block;
+    margin-bottom: 18px;
+
+    color: #1673ad;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+.hero-content h1 {
+    margin-bottom: 20px;
+
+    color: #1c315f;
+    font-size: 58px;
+    font-weight: 800;
+    line-height: 1.1;
+}
+
+.green {
+    color: #00a86b;
+}
+
+.blue {
+    color: #1767c1;
+}
+
+.hero-content p {
+    max-width: 460px;
+    color: #647b96;
+
+    font-size: 19px;
+    font-weight: 500;
+    line-height: 1.7;
+}
+
+
+/* ==========================================
+   7. TRUST FEATURES
+========================================== */
+
+.trust-features {
+    width: 100%;
+    min-height: 75px;
+
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    align-items: center;
+
+    background-color: #fff;
+}
+
+.feature-item {
+    min-width: 0;
+
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    padding: 10px 20px;
+    border-right: 1px solid #edf0f5;
+}
+
+.feature-item:last-child {
+    border-right: none;
+}
+
+
+/* ==========================================
+   8. FEATURE ICONS
+========================================== */
+
+.feature-icon {
+    width: 40px;
+    height: 40px;
+    min-width: 40px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 50%;
+}
+
+.feature-icon svg {
+    width: 23px;
+    height: 23px;
+
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.8;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.orange {
+    background-color: #fff2df;
+    color: #d76b00;
+}
+
+.green-bg {
+    background-color: #dcfce7;
+    color: #00a65a;
+}
+
+.yellow {
+    background-color: #ffefd8;
+    color: #ed851c;
+}
+
+.red {
+    background-color: #ffe1e2;
+    color: #ff454c;
+}
+
+.purple {
+    background-color: #f3e5ff;
+    color: #a020f0;
+}
+
+
+/* ==========================================
+   9. FEATURE CONTENT
+========================================== */
+
+.feature-content {
+    min-width: 0;
+}
+
+.feature-content h3 {
+    margin-bottom: 1px;
+    color: #172b54;
+    font-size: 16px;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.feature-content p {
+    color: #71839d;
+    font-size: 12px;
+    line-height: 1.3;
+}
+
+
+/* ==========================================
+   10. INSURANCE FEATURE SECTION
+========================================== */
+
+.feature-section {
+    width: 100%;
+    max-width: 1700px;
+    min-height: 250px;
+
+    margin: 30px auto 0;
+    padding: 25px 30px;
+
+    background-color: #fff;
+    border-radius: 30px;
+}
+
+
+/* ==========================================
+   11. SECTION HEADING
+========================================== */
+
+.feature-subsectionone {
+    width: 100%;
+}
+
+.feature-subsectionone ul {
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+}
+
+.feature-subsectionone ul li:first-child {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.feature-subsectionone .badge {
+    margin: 0;
+    color: #1a2e5a;
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: 0;
+}
+
+.feature-subsectionone .green {
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.feature-subsectionone ul li a {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+
+    color: #1a2e5a;
+    font-size: 14px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.feature-subsectionone ul li a svg {
+    width: 20px;
+    height: 20px;
+}
+
+
+/* ==========================================
+   12. INSURANCE CATEGORY GRID
+========================================== */
+
+.feature-subsectiontwo {
+    width: 100%;
+    margin-top: 25px;
+}
+
+.feature-subsectiontwo ul {
+    width: 100%;
+
+    display: grid;
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    gap: 15px;
+}
+
+
+/* ==========================================
+   13. INSURANCE CARDS
+========================================== */
+
+.feature-subsectiontwo ul li {
+    min-width: 0;
+    min-height: 205px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding: 20px 10px;
+
+    text-align: center;
+    background-color: #fff;
+    border: 1px solid #edf0f5;
+    border-radius: 20px;
+
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.feature-subsectiontwo ul li:hover {
+    border-color: #b8d5ee;
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+}
+
+.feature-subsectiontwo ul li:nth-child(1) {
+    background-color: #f0faf4;
+}
+
+
+/* Category Images */
+
+.feature-subsectiontwo ul li img {
+    width: 90px;
+    height: 90px;
+
+    object-fit: contain;
+    margin-bottom: 12px;
+}
+
+
+/* Category Heading */
+
+.feature-subsectiontwo ul li h3 {
+    margin-bottom: 8px;
+
+    color: #1a2e5a;
+    font-size: 17px;
+    font-weight: 700;
+}
+
+
+/* Compare Plans Link */
+
+.feature-subsectiontwo ul li .compare-link {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+
+    padding: 5px 10px;
+
+    color: #3f3f3f;
+    background-color: #fff;
+    border: 1px solid #79797a;
+    border-radius: 10px;
+
+    font-size: 12px;
+    font-weight: 500;
+    white-space: nowrap;
+
+    transition: all 0.3s ease;
+}
+
+.feature-subsectiontwo ul li .compare-link svg {
+    width: 16px;
+    height: 16px;
+    fill: #000;
+    flex-shrink: 0;
+}
+
+.feature-subsectiontwo ul li .compare-link:hover {
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.08);
+    font-weight: 700;
+}
+
+
+/* ==========================================
+   14. LARGE TABLET
+========================================== */
+
+@media (max-width: 1200px) {
+
+    .navbar {
+        padding: 0 2rem;
+        gap: 15px;
+    }
+
+    .nav-links ul {
+        gap: 1rem;
+    }
+
+    main {
+        padding: 15px 2%;
+    }
+
+    .hero-content {
+        padding-left: 45px;
+    }
+
+    .hero-content h1 {
+        font-size: 48px;
+    }
+
+    .feature-item {
+        padding: 10px;
+        gap: 8px;
+    }
+
+    .feature-content h3 {
+        font-size: 14px;
+    }
+
+    .feature-content p {
+        font-size: 10px;
+    }
+
+    .feature-icon {
+        width: 35px;
+        height: 35px;
+        min-width: 35px;
+    }
+
+    .feature-subsectiontwo ul {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+
+
+/* ==========================================
+   15. TABLET
+========================================== */
+
+@media (max-width: 850px) {
+
+    .navbar {
+        padding: 0 20px;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .hero-banner {
+        min-height: 450px;
+        background-size: auto, 75% 100%;
+    }
+
+    .hero-content {
+        width: 60%;
+        padding-left: 35px;
+    }
+
+    .hero-content h1 {
+        font-size: 44px;
+    }
+
+    .hero-content p {
+        font-size: 16px;
+    }
+
+    .trust-features {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 15px;
+        padding: 20px;
+    }
+
+    .feature-item {
+        border-right: none;
+    }
+}
+
+
+/* ==========================================
+   16. MOBILE
+========================================== */
+
+@media (max-width: 600px) {
+
+    .navbar {
+        height: 65px;
+        padding: 0 15px;
+        gap: 8px;
+    }
+
+    .logo img {
+        height: 38px;
+    }
+
+    main {
+        margin-top: 65px;
+        padding: 10px;
+    }
+
+    .hero-section {
+        border-radius: 18px;
+    }
+
+    .hero-banner {
+        min-height: 540px;
+
+        align-items: flex-start;
+
+        background-image:
+            linear-gradient(
+                to bottom,
+                rgba(234, 247, 243, 0.98) 0%,
+                rgba(234, 247, 243, 0.95) 43%,
+                rgba(234, 247, 243, 0.15) 100%
+            ),
+            url("imgs/family.png");
+
+        background-size: cover;
+        background-position: center;
+    }
+
+    .hero-content {
+        width: 100%;
+        padding: 35px 22px;
+    }
+
+    .badge {
+        font-size: 12px;
+    }
+
+    .hero-content h1 {
+        font-size: 42px;
+    }
+
+    .hero-content p {
+        max-width: 100%;
+        font-size: 16px;
+    }
+
+    /* Trust Features */
+
+    .trust-features {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 18px;
+        padding: 20px 12px;
+    }
+
+    .feature-item {
+        padding: 5px;
+        gap: 8px;
+    }
+
+    .feature-icon {
+        width: 35px;
+        height: 35px;
+        min-width: 35px;
+    }
+
+    .feature-icon svg {
+        width: 20px;
+        height: 20px;
+    }
+
+    .feature-content h3 {
+        font-size: 13px;
+    }
+
+    .feature-content p {
+        font-size: 10px;
+    }
+
+    /* Navbar Actions */
+
+    .nav-action {
+        margin-left: auto;
+    }
+
+    .nav-action ul {
+        gap: 7px;
+    }
+
+    .action-btn span {
+        display: none;
+    }
+
+    .action-btn {
+        width: 36px;
+        height: 36px;
+        padding: 7px;
+        border-radius: 50%;
+    }
+
+    .action-btn svg {
+        width: 19px;
+        height: 19px;
+    }
+
+    .nav-action ul li:nth-child(2) .action-btn {
+        width: 36px;
+        height: 36px;
+        padding: 7px;
+        border-radius: 50%;
+    }
+
+    /* Insurance Section */
+
+    .feature-section {
+        margin-top: 20px;
+        padding: 20px 15px;
+        border-radius: 20px;
+    }
+
+    .feature-subsectionone .badge,
+    .feature-subsectionone .green {
+        font-size: 18px;
+    }
+
+    .feature-subsectionone ul li a {
+        font-size: 12px;
+    }
+
+    .feature-subsectiontwo {
+        margin-top: 20px;
+    }
+
+    .feature-subsectiontwo ul {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+    }
+
+    .feature-subsectiontwo ul li {
+        min-height: 185px;
+        padding: 15px 8px;
+    }
+
+    .feature-subsectiontwo ul li img {
+        width: 70px;
+        height: 70px;
+    }
+
+    .feature-subsectiontwo ul li h3 {
+        font-size: 15px;
+    }
+
+    .feature-subsectiontwo ul li .compare-link {
+        font-size: 11px;
+    }
+}
+
+
+/* ==========================================
+   17. SMALL MOBILE
+========================================== */
+
+@media (max-width: 380px) {
+
+    .navbar {
+        padding: 0 10px;
+    }
+
+    .logo img {
+        height: 33px;
+    }
+
+    .nav-action ul {
+        gap: 5px;
+    }
+
+    .action-btn,
+    .nav-action ul li:nth-child(2) .action-btn {
+        width: 32px;
+        height: 32px;
+        padding: 6px;
+    }
+
+    .hero-content {
+        padding: 30px 18px;
+    }
+
+    .hero-content h1 {
+        font-size: 36px;
+    }
+
+    .trust-features {
+        grid-template-columns: 1fr;
+    }
+
+    .feature-subsectionone .badge,
+    .feature-subsectionone .green {
+        font-size: 16px;
+    }
+
+    .feature-subsectionone ul li a {
+        font-size: 10px;
+    }
+
+    .feature-subsectiontwo ul {
+        gap: 8px;
+    }
+
+    .feature-subsectiontwo ul li {
+        min-height: 170px;
+    }
+
+    .feature-subsectiontwo ul li img {
+        width: 60px;
+        height: 60px;
+    }
+}
